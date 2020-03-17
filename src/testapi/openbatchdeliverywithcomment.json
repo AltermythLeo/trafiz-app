@@ -1,0 +1,508 @@
+{
+ "openBatchDeliveryOfflineId": "ODB-d51642a5802411e89cd1000d3aa384f1", // format: ODB-idmssupplier
+ "fishIdToDelivery": {  // skip, ini buat ui
+  "2-1DMJ6DO": {
+   "nameBuyer": "SupplierX",
+   "close": true,
+   "id": "DS-2-1CKA81I2E"
+  },
+  "2-1DMJ754": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "DS-2-1CKA8OPBK"
+  },
+  "2-1DMLBCP": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "DS-2-1CKA8OPBK"
+  },
+  "2-1DM7UUB": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CJUQMFJA"
+  },
+  "2-1DM7UTL": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CJUQMFJA"
+  },
+  "2-1DM7UUO": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CJUQMFJA"
+  },
+  "2-1DM7H7F": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CJUQMFJA"
+  },
+  "2-1DM7UV9": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CJUQMFJA"
+  },
+  "2-1DM7T9M": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "BUYER-2-1CJSQJ8K2CATCH-2-1CJUQADGM"
+  },
+  "2-1DMFDOV": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CK6I5B7N"
+  },
+  "2-1DMFDP6": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "BUYER-2-1CJSQJ8K2CATCH-2-1CK6I5B7N"
+  },
+  "2-1DMFDRK": {
+   "nameBuyer": "SupplierX",
+   "close": true,
+   "id": "supplier-d51597cf802411e89cd1000d3aa384f1-1530881050554-9161CATCH-2-1CK6I5B7N"
+  },
+  "071JDQ0G": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CJODSJ54"
+  },
+  "2-1DM7UL0": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "BUYER-2-1CJSQJ8K2CATCH-2-1CJUR5KVE"
+  },
+  "2-1DM7UKN": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "BUYER-2-1CJSQJ8K2CATCH-2-1CJUR5KVE"
+  },
+  "071G3907": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525catch-d51597cf802411e89cd1000d3aa384f1-1531996417031-1607"
+  },
+  "2-1DMDTV1": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "BUYER-2-1CJSQJ8K2CATCH-2-1CK53D8GR"
+  },
+  "071JDJWT": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CJOD587N"
+  },
+  "071JDN46": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CJODI7V9"
+  },
+  "071IOU95": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CJKV5JFI"
+  },
+  "071G4C3Y": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525catch-d51597cf802411e89cd1000d3aa384f1-1532501786442-5943"
+  },
+  "2-1DMFC5G": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CK6GIRM3"
+  },
+  "2-1DM5MLH": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "BUYER-2-1CJSQJ8K2CATCH-2-1CJT228V2"
+  },
+  "2-1DMFCRV": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "BUYER-2-1CJSQJ8K2CATCH-2-1CK6H8P8E"
+  },
+  "2-1DMFCSJ": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "BUYER-2-1CJSQJ8K2CATCH-2-1CK6H8P8E"
+  },
+  "2-1DMIIBR": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "DS-2-1CK9A4C19"
+  },
+  "2-1DMIASQ": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "DS-2-1CK9A4C19"
+  },
+  "2-1DMFEHG": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525CATCH-2-1CK6IS34J"
+  },
+  "2-1DMFEM7": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "BUYER-2-1CJSQJ8K2CATCH-2-1CK6IS34J"
+  },
+  "2-1DMJ6PQ": {
+   "nameBuyer": "Franky",
+   "close": true,
+   "id": "DS-2-1CKA8BR5B"
+  },
+  "2-1CKJVQHFB": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "DS-2-1CKJGP1VV"
+  },
+  "2-1CKJOTK54": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "DS-2-1CKJLN1O1"
+  },
+  "2-1CKJVPTVE": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "DS-2-1CKJLN1O1"
+  },
+  "2-1CKM09PON": {
+   "nameBuyer": "Perusahaan kool",
+   "close": true,
+   "id": "DS-2-1CKJLS2MT"
+  },
+  "3-1CKUKRORJ": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "DS-3-1CKUM1KQU"
+  },
+  "2-1CLGDB5DD": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "DS-2-1CKKE5PPS"
+  },
+  "3-1CLGGR1CH": {
+   "nameBuyer": "Bogasari",
+   "close": true,
+   "id": "DS-3-1CLGGOLRM"
+  },
+  "3-1CLGGRVV8": {
+   "nameBuyer": "Bogasari",
+   "close": true,
+   "id": "DS-3-1CLGGOLRM"
+  },
+  "2-1CLGH1Q0N": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "DS-2-1CKKIAP57"
+  },
+  "2-1CLGIG96U": {
+   "nameBuyer": "Nutrindo",
+   "close": true,
+   "id": "DS-2-1CKKE70OA"
+  },
+  "2-1CLL815U7": {
+   "nameBuyer": "Bogasari",
+   "close": true,
+   "id": "DS-2-1CLJ4I2QP"
+  }
+ },
+ "batchDeliveries": [ // parsing, array of open batch delivery, semua parameter penting
+  {
+   "deliverysheetofflineid": "DS-2-1CKJGP1VV",
+   "buyerName": "Nutrindo",
+   "buyerId": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525",
+   "buyerSupplier": false,
+   "fish": [
+    {
+     "idtrfishcatch": "2fa716159d3c11e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CKJVQHFA",
+     "amount": 452,
+     "grade": "A",
+     "description": "",
+     "idfish": "2-1CKJVQHFB",
+     "idtrcatchoffline": "CATCH-2-1CKJKHG1T"
+    }
+   ],
+   "sellPrice": "1000000",
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "hidden": true
+  },
+  {
+   "deliverysheetofflineid": "DS-2-1CKJLN1O1",
+   "buyerName": "Perusahaan kool",
+   "buyerId": "BUYER-2-1CJSQJ8K2",
+   "buyerSupplier": false,
+   "fish": [
+    {
+     "idtrfishcatch": "5399f5f89d2b11e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CKJOTK54",
+     "amount": 456,
+     "grade": "A",
+     "description": "",
+     "idfish": "2-1CKJOTK54",
+     "idtrcatchoffline": "CATCH-2-1CKJKHG1T"
+    },
+    {
+     "idtrfishcatch": "20c14c8c9d3c11e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CKJVPTVC",
+     "amount": 233,
+     "grade": "D",
+     "description": "",
+     "idfish": "2-1CKJVPTVE",
+     "idtrcatchoffline": "CATCH-2-1CKJKHG1T"
+    }
+   ],
+   "sellPrice": 0,
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "createdDate": "2018-08-11",
+   "hidden": true
+  },
+  {
+   "deliverysheetofflineid": "DS-2-1CKJLS2MT",
+   "buyerName": "Perusahaan kool",
+   "buyerId": "BUYER-2-1CJSQJ8K2",
+   "buyerSupplier": false,
+   "fish": [
+    {
+     "idtrfishcatch": "98daa2819dd911e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CKM09POM",
+     "amount": 333,
+     "grade": "A",
+     "description": "",
+     "idfish": "2-1CKM09PON",
+     "idtrcatchoffline": "CATCH-2-1CKJKHG1T"
+    }
+   ],
+   "sellPrice": "",
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "createdDate": "2018-08-11",
+   "modBy": "Markipli Jukerbeg",
+   "hidden": true
+  },
+  {
+   "deliverysheetofflineid": "DS-2-1CKKE5PPS",
+   "buyerName": "Nutrindo",
+   "buyerId": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525",
+   "buyerSupplier": false,
+   "fish": [
+    {
+     "idtrfishcatch": "b13f3c0fa5e811e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CLGDB5DB",
+     "amount": 123,
+     "grade": "ABC",
+     "description": "",
+     "idfish": "2-1CLGDB5DD",
+     "namecreator": "Markipli Jukerbeg",
+     "namelasttrans": null,
+     "idtrcatchoffline": "CATCH-2-1CLGD8O8J",
+     "modBy": "Markipli Jukerbeg"
+    }
+   ],
+   "sellPrice": 0,
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "createdDate": "2018-08-11",
+   "hidden": true
+  },
+  {
+   "deliverysheetofflineid": "DS-2-1CKKE70OA",
+   "buyerName": "Nutrindo",
+   "buyerId": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525",
+   "buyerSupplier": false,
+   "fish": [
+    {
+     "idtrfishcatch": "482aca16a5f511e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CLGIG96T",
+     "amount": 123,
+     "grade": "A",
+     "description": "",
+     "idfish": "2-1CLGIG96U",
+     "namecreator": "Markipli Jukerbeg",
+     "namelasttrans": null,
+     "idtrcatchoffline": "CATCH-2-1CLGD8O8J",
+     "modBy": "Markipli Jukerbeg"
+    }
+   ],
+   "sellPrice": 0,
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "createdDate": "2018-08-11",
+   "hidden": true
+  },
+  {
+   "deliverysheetofflineid": "DS-2-1CKKIAP57",
+   "buyerName": "Nutrindo",
+   "buyerId": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525",
+   "buyerSupplier": false,
+   "fish": [
+    {
+     "idtrfishcatch": "bddb46d3a5f111e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CLGH1Q0M",
+     "amount": 100,
+     "grade": "",
+     "description": "",
+     "idfish": "2-1CLGH1Q0N",
+     "namecreator": "Markipli Jukerbeg",
+     "namelasttrans": null,
+     "idtrcatchoffline": "CATCH-2-1CLGD8O8J",
+     "modBy": "Markipli Jukerbeg"
+    }
+   ],
+   "sellPrice": "",
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "createdDate": "2018-08-11",
+   "modBy": "Komeng-Kipli Helper",
+   "hidden": true
+  },
+  {
+   "deliverysheetofflineid": "DS-3-1CKUM1KQU",
+   "buyerName": "Nutrindo",
+   "buyerId": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525",
+   "buyerSupplier": false,
+   "fish": [
+    {
+     "idtrfishcatch": "c915ba69a07c11e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-3-1CKUKRORI",
+     "amount": 123,
+     "grade": "A",
+     "description": "",
+     "idfish": "3-1CKUKRORJ",
+     "idtrcatchoffline": "CATCH-3-1CKUKMSMJ",
+     "modBy": "Komeng-Kipli Helper"
+    }
+   ],
+   "sellPrice": 0,
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "createdDate": "2018-08-15",
+   "modBy": "Komeng-Kipli Helper",
+   "hidden": true
+  },
+  {
+   "deliverysheetofflineid": "DS-3-1CLGGOLRM",
+   "buyerName": "Bogasari",
+   "buyerId": "BUYER-2-1CL1EOU6P",
+   "buyerSupplier": false,
+   "fish": [
+    {
+     "idtrfishcatch": "36fb38a4a5f111e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-3-1CLGGR1CG",
+     "amount": 100,
+     "grade": "A",
+     "description": "",
+     "idfish": "3-1CLGGR1CH",
+     "namecreator": "Komeng-Kipli Helper",
+     "namelasttrans": null,
+     "idtrcatchoffline": "CATCH-2-1CLGD8O8J",
+     "modBy": "Komeng-Kipli Helper"
+    },
+    {
+     "idtrfishcatch": "4a040cf8a5f111e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-3-1CLGGRVV6",
+     "amount": 456,
+     "grade": "ABC",
+     "description": "",
+     "idfish": "3-1CLGGRVV8",
+     "namecreator": "Komeng-Kipli Helper",
+     "namelasttrans": null,
+     "idtrcatchoffline": "CATCH-2-1CLGD8O8J",
+     "modBy": "Komeng-Kipli Helper"
+    }
+   ],
+   "sellPrice": 0,
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "createdDate": "2018-08-22",
+   "modBy": "Komeng-Kipli Helper",
+   "hidden": true
+  },
+  {
+   "deliverysheetofflineid": "DS-2-1CLJ4I2QP",
+   "buyerName": "Bogasari",
+   "buyerId": "BUYER-2-1CL1EOU6P",
+   "buyerSupplier": false,
+   "fish": [
+    {
+     "idtrfishcatch": "5665a987a76211e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CLL815U6",
+     "amount": 100,
+     "grade": "A",
+     "description": "",
+     "idfish": "2-1CLL815U7",
+     "namecreator": "Markipli Jukerbeg",
+     "namelasttrans": null,
+     "idtrcatchoffline": "CATCH-2-1CLL5SD8K",
+     "modBy": "Markipli Jukerbeg"
+    }
+   ],
+   "sellPrice": 0,
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "createdDate": "2018-08-23",
+   "modBy": "Markipli Jukerbeg",
+   "hidden": true
+  },
+  {
+   "deliverysheetofflineid": "DS-2-1CLLC00QJ",
+   "buyerName": "Bogasari",
+   "buyerId": "BUYER-2-1CL1EOU6P",
+   "buyerSupplier": false,
+   "fish": [],
+   "sellPrice": 0,
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "createdDate": "2018-08-24",
+   "modBy": "Markipli Jukerbeg"
+  },
+  {
+   "deliverysheetofflineid": "DS-2-1CLLQVA45",
+   "buyerName": "Nutrindo",
+   "buyerId": "buyer-d51597cf802411e89cd1000d3aa384f1-1530877591736-9525",
+   "buyerSupplier": false,
+   "fish": [],
+   "sellPrice": 0,
+   "notes": "",
+   "transportBy": null,
+   "transportName": null,
+   "transportReceipt": null,
+   "deliverDate": null,
+   "createdDate": "2018-08-24",
+   "modBy": "Markipli Jukerbeg"
+  }
+ ]
+}

@@ -1,0 +1,204 @@
+{
+ "version": 2,                                  // cek dulu version = 2 supaya format jsonnya seperti ini
+ "batchId": "DS-2-1CKA8BR5B",                   // penting, batchId = deliverysheetno = id sheet
+ "deliverySheetData": {
+  "deliverySheetNo": "DS-2-1CKA8BR5B",          // parsing menjadi data batch delivery
+  "nationalRegistrationSupplierCode": "supp2",  // parsing menjadi data batch delivery
+  "supplierName": "Kipli",                      // parsing menjadi data batch delivery
+  "deliveryDate": "18-08-07",                   // parsing menjadi data batch delivery
+  "species": "",                                // skip, ini versi lama, versi baru nempel ke fishcatch (lihat bawah)
+  "numberOfFishOrLoin": 1,                      // parsing menjadi data batch delivery
+  "totalWeight": 456,                           // parsing menjadi data batch delivery
+  "vesselName": "",                             // skip, alasan idem
+  "vesselSize": "",                             // skip, alasan idem
+  "vesselRegistrationNo": "",                   // skip, alasan idem
+  "expiredDate": "",                            // skip, alasan idem
+  "vesselFlag": "",                             // skip, alasan idem
+  "fishingGround": "",                          // skip, alasan idem
+  "landingSite": "",                            // skip, alasan idem
+  "gearType": "",                               // skip, alasan idem
+  "catchDate": "",                              // skip, alasan idem
+  "fishermanName": "",                          // skip, alasan idem
+  "landingDate": "",                            // skip, alasan idem
+  "unitName": "unit",                           // skip, alasan idem
+  "fadused": ""                                 // skip, alasan idem
+ },
+ "viewData": {
+  "buyerName": "Franky",    // skip, karena untuk ui
+  "fishNameEng": "",        // skip, alasan idem
+  "fishNameInd": "",        // skip, alasan idem
+  "numUnit": 1,             // skip, alasan idem
+  "totalWeight": 456,       // skip, alasan idem
+  "compliance": [           // skip, alasan idem
+   false,   
+   false,
+   false
+  ],
+  "buyPrice": 0,            // skip, alasan idem
+  "sellPrice": 0,           // parsing menjadi data batch delivery
+  "gradeCodes": [           // skip, alasan idem
+   "456B"
+  ],
+  "notes": "",              // parsing menjadi data batch delivery
+  "unitName": "unit"        // skip, alasan idem
+ },
+ "fishCatchIds": [          // skip, alasan idem
+  "FISHCATCH-2-1CKA8CMRC"
+ ],
+ "fishCatchData": [         // sangat penting! parsing menjadi array of fishcatch di dalam batch delivery
+  {
+   "idtrfishcatch": "d5312d719a4311e89cd1000d3aa384f1",
+   "idtrfishcatchoffline": "FISHCATCH-2-1CKA8CMRC",   // penting
+   "amount": 456,
+   "grade": "B",
+   "description": "",
+   "idfish": "2-1DMJ6PQ",
+   "idtrcatchoffline": "CATCH-2-1CK9D2Q3T",           // penting
+   "fishNameEng": "",
+   "fishNameInd": "Horn shark",
+   "unitName": "1",
+   "species": "HEF",
+   "vesselName": "Dead Man Chest",
+   "vesselSize": 12,
+   "vesselRegistrationNo": "123123",
+   "expiredDate": "",
+   "vesselFlag": "ID",
+   "fishingGround": "714",
+   "landingSite": null,
+   "gearType": "01.1.0",
+   "catchDate": "18-08-07",
+   "fishermanName": "Leo",
+   "landingDate": "18-08-07",
+   "fadused": "N",
+   "sellPrice": "10000"                              // parameter baru request wong hari ini
+  }
+ ],
+ "catchRefs": { // skip, tidak penting
+  "CATCH-2-1CK9D2Q3T": {
+   "idtrcatch": "3e66fc269a0111e89cd1000d3aa384f1",
+   "idtrcatchoffline": "CATCH-2-1CK9D2Q3T",
+   "idmssupplier": "d51642a5802411e89cd1000d3aa384f1",
+   "suppliername": "Markipli Jukerbeg",
+   "idmsfisherman": null,
+   "idmsuserfisherman": "36e3d747803011e89cd1000d3aa384f1",
+   "idmsbuyersupplier": null,
+   "fishermanname": "Leo",
+   "idmsship": null,
+   "shipname": "Dead Man Chest",
+   "idmsfish": "",
+   "purchasedate": "2018-08-07",
+   "purchasetime": "00:00:00",
+   "catchorfarmed": "1",
+   "bycatch": "1",
+   "fadused": "0",
+   "purchaseuniqueno": null,
+   "productformatlanding": "1",
+   "unitmeasurement": "1",
+   "quantity": 4,
+   "weight": 879,
+   "fishinggroundarea": "714",
+   "purchaselocation": null,
+   "uniquetripid": null,
+   "datetimevesseldeparture": "2018-08-07 00:00:00",
+   "datetimevesselreturn": "2018-08-07 00:00:00",
+   "portname": null,
+   "englishname": "Horn shark",
+   "indname": "",
+   "threea_code": "HEF",
+   "priceperkg": null,
+   "totalprice": null,
+   "loanexpense": null,
+   "otherexpense": null,
+   "reqidnull": 99,
+   "requsnull": 99,
+   "reqeunull": 99,
+   "requsaidnull": 99,
+   "postdate": null,
+   "idfishermanoffline": "fisherman-d51597cf802411e89cd1000d3aa384f1-1530780497133-4426",
+   "idbuyeroffline": null,
+   "idfishoffline": "fish-d51597cf802411e89cd1000d3aa384f1-1530970620433-3022",
+   "idshipoffline": "123123123",
+   "close": "0",
+   "fish": [
+    {
+     "idtrfishcatch": "503554959a0111e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CK9D4KQO",
+     "amount": 100,
+     "grade": "A",
+     "description": "",
+     "idfish": "2-1DMIASQ"
+    },
+    {
+     "idtrfishcatch": "1ce90d7c9a1311e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CK9KE285",
+     "amount": 200,
+     "grade": "B",
+     "description": "",
+     "idfish": "2-1DMIIBR"
+    },
+    {
+     "idtrfishcatch": "ef5799749a4211e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CKA80TPU",
+     "amount": 123,
+     "grade": "B",
+     "description": "",
+     "idfish": "2-1DMJ6DO"
+    },
+    {
+     "idtrfishcatch": "d5312d719a4311e89cd1000d3aa384f1",
+     "idtrfishcatchoffline": "FISHCATCH-2-1CKA8CMRC",
+     "amount": 456,
+     "grade": "B",
+     "description": "",
+     "idfish": "2-1DMJ6PQ"
+    }
+   ]
+  }
+ },
+ "shipRefs": { // skip, tidak penting
+  "123123123": {
+   "idmsship": "d49c237b807411e89cd1000d3aa384f1",
+   "idshipoffline": "123123123",
+   "vesselname_param": "Dead Man Chest",
+   "vessellicensenumber_param": "123123",
+   "vessellicenseexpiredate_param": null,
+   "fishinglicensenumber_param": "123123",
+   "fishinglicenseexpiredate_param": null,
+   "vesselsize_param": 12,
+   "vesselflag_param": "ID",
+   "vesselgeartype_param": "01.1.0",
+   "vesseldatemade_param": null,
+   "vesselownername_param": "Rendi",
+   "vesselownerid_param": "123123test",
+   "vesselownerphone_param": "08123123",
+   "vesselownersex_param": "1",
+   "vesselownerdob_param": null,
+   "vesselowneraddress_param": "jl testing"
+  }
+ },
+ "fishRefs": { // skip, tidak penting
+  "fish-d51597cf802411e89cd1000d3aa384f1-1530970620433-3022": {
+   "idmsfish": "004acc8b81eb11e89cd1000d3aa384f1",
+   "idfishoffline": "fish-d51597cf802411e89cd1000d3aa384f1-1530970620433-3022",
+   "indname": "Hiu Tanduk",
+   "localname": "Hiu Unicorn",
+   "idltfish": 16,
+   "isscaap": 38,
+   "taxocode": "1040100101",
+   "threea_code": "HEF",
+   "scientific_name": "Heterodontus francisci",
+   "indonesian_name": "",
+   "english_name": "Horn shark",
+   "french_name": "Requin dormeur cornu",
+   "spanish_name": "Dormilón cornudo",
+   "author": "(Girard 1855)",
+   "family": "Heterodontidae",
+   "bio_order": "HETERODONTIFORMES",
+   "stats_data": 0,
+   "lasttransdate": null,
+   "lasttransact": "C",
+   "photo": "http://104.215.185.180/imgupload/1530970675.jpg",
+   "price": 0
+  }
+ }
+}

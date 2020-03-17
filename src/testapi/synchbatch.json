@@ -1,0 +1,157 @@
+{
+ "sender": "d51597cf802411e89cd1000d3aa384f1",
+ "data": [
+  {
+   "type": "create",
+   "function": "catch",
+   "functionName": "addcatchv3",
+   "param": {
+    "idtrcatchofflineparam": "CATCH-2-1CM1VBBJC",
+    "idmssupplierparam": "d51642a5802411e89cd1000d3aa384f1",
+    "idfishermanofflineparam": "fisherman-d51597cf802411e89cd1000d3aa384f1-1530780497133-4426",
+    "idbuyerofflineparam": null,
+    "purchaseuniquenoparam": "CATCH-2-1CM1VBBJC",
+    "idshipofflineparam": "ship-d51597cf802411e89cd1000d3aa384f1-1534771556493-7988",
+    "idfishofflineparam": "fish-d51597cf802411e89cd1000d3aa384f1-1534237805978-7894",
+    "purchasedateparam": "2018-08-29",
+    "purchasetimeparam": "00:00:00",
+    "catchorfarmedparam": "1",
+    "bycatchparam": "1",
+    "fadusedparam": "0",
+    "productformatlandingparam": "1",
+    "unitmeasurementparam": "1",
+    "quantityparam": "0",
+    "weightparam": "0",
+    "fishinggroundareaparam": "714,Q37",
+    "purchaselocationparam": null,
+    "uniquetripidparam": null,
+    "datetimevesseldepartureparam": "2018-08-29",
+    "datetimevesselreturnparam": "2018-08-29",
+    "portnameparam": "Priuk",
+    "priceperkgparam": null,
+    "totalpriceparam": null,
+    "loanexpenseparam": null,
+    "otherexpenseparam": null,
+    "postdateparam": null
+   },
+   "desc": "create data catch sebagai berikut : CATCH-2-1CM1VBBJC,d51642a5802411e89cd1000d3aa384f1,fisherman-d51597cf802411e89cd1000d3aa384f1-1530780497133-4426,,CATCH-2-1CM1VBBJC,ship-d51597cf802411e89cd1000d3aa384f1-1534771556493-7988,fish-d51597cf802411e89cd1000d3aa384f1-1534237805978-7894,2018-08-29,00:00:00,1,1,0,1,1,0,0,714,Q37,,,2018-08-29,2018-08-29,Priuk,,,,,",
+   "dateTime": "2018-08-29 11:34:49"
+  },
+  {
+   "type": "create",
+   "function": "fishcatch",
+   "functionName": "addfishcatchv3",
+   "param": {
+    "idtrcatchofflineparam": "CATCH-2-1CM1VBBJC",
+    "idtrfishcatchofflineparam": "FISHCATCH-2-1CM1VD4VF",
+    "amountparam": "100",
+    "gradeparam": "A",
+    "descparam": "",
+    "idfishparam": "2-1CM1VD4VG"
+   },
+   "desc": "create data fishcatch sebagai berikut : CATCH-2-1CM1VBBJC,FISHCATCH-2-1CM1VD4VF,100,A,,2-1CM1VD4VG",
+   "dateTime": "2018-08-29 11:34:59"
+  },
+  {
+   "type": "create",
+   "function": "fishcatch",
+   "functionName": "addfishcatchv3",
+   "param": {
+    "idtrcatchofflineparam": "CATCH-2-1CM1VBBJC",
+    "idtrfishcatchofflineparam": "FISHCATCH-2-1CM1VDCE8",
+    "amountparam": "200",
+    "gradeparam": "A",
+    "descparam": "",
+    "idfishparam": "2-1CM1VDCE9"
+   },
+   "desc": "create data fishcatch sebagai berikut : CATCH-2-1CM1VBBJC,FISHCATCH-2-1CM1VDCE8,200,A,,2-1CM1VDCE9",
+   "dateTime": "2018-08-29 11:35:07"
+  },
+  {
+   "type": "create",
+   "function": "fishcatch",
+   "functionName": "addfishcatchv3",
+   "param": {
+    "idtrcatchofflineparam": "CATCH-2-1CM1VBBJC",
+    "idtrfishcatchofflineparam": "FISHCATCH-2-1CM1VDJDL",
+    "amountparam": "300",
+    "gradeparam": "A",
+    "descparam": "",
+    "idfishparam": "2-1CM1VDJDM"
+   },
+   "desc": "create data fishcatch sebagai berikut : CATCH-2-1CM1VBBJC,FISHCATCH-2-1CM1VDJDL,300,A,,2-1CM1VDJDM",
+   "dateTime": "2018-08-29 11:35:14"
+  },
+  {
+   "type": "create",
+   "function": "catch",
+   "functionName": "addcatchv3",
+   "param": {
+    "idtrcatchofflineparam": "CATCH-2-1CM1VFVMH",
+    "idmssupplierparam": "d51642a5802411e89cd1000d3aa384f1",
+    "idfishermanofflineparam": "fisherman-d51597cf802411e89cd1000d3aa384f1-1530780497133-4426",
+    "idbuyerofflineparam": null,
+    "purchaseuniquenoparam": "CATCH-2-1CM1VFVMH",
+    "idshipofflineparam": "ship-d51597cf802411e89cd1000d3aa384f1-1534771556493-7988",
+    "idfishofflineparam": "fish-d51597cf802411e89cd1000d3aa384f1-1531121977135-356",
+    "purchasedateparam": "2018-08-29",
+    "purchasetimeparam": "00:00:00",
+    "catchorfarmedparam": "1",
+    "bycatchparam": "1",
+    "fadusedparam": "0",
+    "productformatlandingparam": "1",
+    "unitmeasurementparam": "1",
+    "quantityparam": "0",
+    "weightparam": "0",
+    "fishinggroundareaparam": "714,Q37",
+    "purchaselocationparam": null,
+    "uniquetripidparam": null,
+    "datetimevesseldepartureparam": "2018-08-29",
+    "datetimevesselreturnparam": "2018-08-29",
+    "portnameparam": "Priuk",
+    "priceperkgparam": null,
+    "totalpriceparam": null,
+    "loanexpenseparam": null,
+    "otherexpenseparam": null,
+    "postdateparam": null
+   },
+   "desc": "create data catch sebagai berikut : CATCH-2-1CM1VFVMH,d51642a5802411e89cd1000d3aa384f1,fisherman-d51597cf802411e89cd1000d3aa384f1-1530780497133-4426,,CATCH-2-1CM1VFVMH,ship-d51597cf802411e89cd1000d3aa384f1-1534771556493-7988,fish-d51597cf802411e89cd1000d3aa384f1-1531121977135-356,2018-08-29,00:00:00,1,1,0,1,1,0,0,714,Q37,,,2018-08-29,2018-08-29,Priuk,,,,,",
+   "dateTime": "2018-08-29 11:36:46"
+  },
+  {
+   "type": "create",
+   "function": "fishcatch",
+   "functionName": "addfishcatchv3",
+   "param": {
+    "idtrcatchofflineparam": "CATCH-2-1CM1VFVMH",
+    "idtrfishcatchofflineparam": "FISHCATCH-2-1CM1VGUO9",
+    "amountparam": "100",
+    "gradeparam": "A",
+    "descparam": "",
+    "idfishparam": "2-1CM1VGUOA"
+   },
+   "desc": "create data fishcatch sebagai berikut : CATCH-2-1CM1VFVMH,FISHCATCH-2-1CM1VGUO9,100,A,,2-1CM1VGUOA",
+   "dateTime": "2018-08-29 11:37:04"
+  },
+  {
+   "type": "create",
+   "function": "loan",
+   "functionName": "addnewloanv4",
+   "param": {
+    "idloanofflineparam": "L-2-1CM1VIH3T",
+    "descparam": "Pertalite 100 Liter",
+    "rpparam": 1000000,
+    "idmsuserloanparam": "36e3d747803011e89cd1000d3aa384f1",
+    "idmsbuyerloanparam": null,
+    "idmssupplierparam": "d51642a5802411e89cd1000d3aa384f1",
+    "loandateparam": "2018-08-29",
+    "loaneridmsuserofficerparam": "d51597cf802411e89cd1000d3aa384f1",
+    "idmstypeitemloanofflineparam": "LOANTYPE-2-1CLLVGTNO",
+    "unitparam": 100,
+    "priceperunitparam": 10000
+   },
+   "desc": "create data loan sebagai berikut : L-2-1CM1VIH3T,Pertalite 100 Liter,1000000,36e3d747803011e89cd1000d3aa384f1,,d51642a5802411e89cd1000d3aa384f1,2018-08-29,d51597cf802411e89cd1000d3aa384f1,LOANTYPE-2-1CLLVGTNO,100,10000",
+   "dateTime": "2018-08-29 11:37:58"
+  }
+ ]
+}

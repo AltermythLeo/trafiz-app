@@ -1,0 +1,54 @@
+{
+  "name": "Trafiz",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.6.2",
+    "axios": "^0.18.0",
+    "base32": "0.0.6",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.1",
+    "normalizr": "^3.2.4",
+    "qs": "^6.5.2",
+    "react": "16.3.1",
+    "react-native": "0.55.3",
+    "react-native-bcrypt": "^2.4.0",
+    "react-native-camera": "^1.1.2",
+    "react-native-check-box": "^2.1.0",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-email": "^1.0.1",
+    "react-native-html-to-pdf": "^0.6.0",
+    "react-native-keyboard-aware-scroll-view": "^0.6.0",
+    "react-native-material-textfield": "^0.12.0",
+    "react-native-material-ui": "^1.22.3",
+    "react-native-print": "^0.5.0",
+    "react-native-qrcode": "^0.2.6",
+    "react-native-qrcode-scanner": "^1.0.1",
+    "react-native-qrcode-svg": "^5.2.0",
+    "react-native-scrollable-tab-view": "^0.8.0",
+    "react-native-sms": "^1.5.2",
+    "react-native-sqlite-storage": "^3.3.5",
+    "react-native-svg": "^6.5.3",
+    "react-native-vector-icons": "^4.6.0",
+    "react-navigation": "^2.0.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-storage": "^4.1.2",
+    "redux-storage-decorator-filter": "^1.1.8",
+    "redux-storage-engine-reactnativeasyncstorage": "^1.0.5",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
