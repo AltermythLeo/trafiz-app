@@ -12,3 +12,7 @@
 ## License
 
 GNU GPL v3
+
+## Related Projects
+
+See Trafiz Backend: https://github.com/AltermythLeo/trafiz-backend
