@@ -13,6 +13,10 @@
 
 GNU GPL v3
 
+## Docs
+
+For Technical Document, see: https://github.com/AltermythLeo/trafiz-backend/blob/master/Trafiz%20Technical%20Document%20v1.2%2022.pdf
+
 ## Related Projects
 
-See Trafiz Backend: https://github.com/AltermythLeo/trafiz-backend
+See Trafiz's backend at: https://github.com/AltermythLeo/trafiz-backend
