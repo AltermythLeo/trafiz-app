@@ -14,6 +14,7 @@ import com.facebook.soloader.SoLoader;
 import com.tkporter.sendsms.SendSMSPackage;
 import com.horcrux.svg.SvgPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import com.reactnativecommunity.rnpermissions.RNPermissionsPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -36,6 +37,7 @@ public class MainApplication extends Application implements ReactApplication {
           new RNCameraPackage(),
           new SvgPackage(),
           new AsyncStoragePackage(),
+          new RNPermissionsPackage(),
           SendSMSPackage.getInstance()
       );
     }

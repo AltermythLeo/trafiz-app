@@ -6,7 +6,9 @@
 * Install nodejs, npm or yarn
 * Git clone this repository
 * Run: `npm run install` or `yarn install`
+* Run: `npx jetify -r`
 * You might need to do this to run it in Android Studio or on real device: `adb reverse tcp:8081 tcp:8081`
+* On android error you may need to run: `cd android` and `gradlew clean`
 * To install to device run: `react-native run-android`
 
 ## License
