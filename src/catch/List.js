@@ -36,7 +36,7 @@ class ListScreen extends React.Component {
         <Title txt={L('CATCH')} />
       ),
       headerLeft: (
-        <BackButton navigation={navigation}/>
+        <Navicon navigation={navigation}/>
       )
     };
   };

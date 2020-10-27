@@ -1,0 +1,7 @@
+hack ketika react-native-chart-kit membuat masalah babel 7 vs 6
+solusi hilangkan depedency to expo
+
+https://github.com/indiespirit/react-native-chart-kit/issues/143
+
+goto node_modules/react-native-chart-kit
+looks like the issue is in .babelrc, I should try using "presets": ["react-native"]

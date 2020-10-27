@@ -124,6 +124,7 @@ class ListScreen extends React.Component {
     _.remove(rows,{lasttransact:"D"});
 
     let sortedRows;
+    console.warn(rows)
     const english = (this.props.stateSetting.language == 'english');
 
     if(english) 

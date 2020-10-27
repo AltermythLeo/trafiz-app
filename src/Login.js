@@ -10,6 +10,7 @@ import {
   Alert,
   Image
 } from 'react-native';
+import VersionNumber from 'react-native-version-number';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Button } from 'react-native-material-ui';
 import { TextField } from 'react-native-material-textfield';
@@ -17,10 +18,13 @@ import moment from 'moment';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from './actions/AppActions';
+import * as investActions from './actions/InvestActions';
 
 const lib = require('./lib');
 const bcrypt = require('react-native-bcrypt');
 const L = require('./dictionary').translate;
+const SqliteInvest = require('./SqliteInvest');
+const SyncHelper = require('./invest/SyncHelper');
 
 function bcryptPassword(pass) {
   return new Promise((resolve,reject)=>{
@@ -112,8 +116,14 @@ class ReloginScreen extends React.Component {
   }
 
   confirmReset() {
-    this.props.actions.logoutUser();
-    this.props.navigation.navigate('Login');
+    this.setState({
+      show:'busy'
+    });
+    SqliteInvest.emptyAllTables()
+    .then(()=>{
+      this.props.actions.logoutUser();
+      this.props.navigation.navigate('Login');  
+    })
   }
 
   handleLogin() {
@@ -166,7 +176,14 @@ class ReloginScreen extends React.Component {
 
     this.props.actions.startSynchronize(resume)
     .then(()=>{
-      console.warn('synchronize done');
+      const idmsuser = this.props.stateLogin.idmsuser;
+      this.setState({
+        show:'synchronizeInvest'
+      });
+      // return SyncHelper.downloadInvestDataForThreeMonth(idmsuser);
+      return SyncHelper.downloadInvestDataFromStartYear(this.props.investActions,idmsuser);
+    })
+    .then(()=>{
       if(this.props.stateLogin.accessrole == '1' )
         return this.props.navigation.navigate('HomeOwner');  
 
@@ -196,6 +213,22 @@ class ReloginScreen extends React.Component {
         <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
           <ActivityIndicator />
           <Text>{step}</Text>
+        </View>
+      );
+    }
+
+    if(this.state.show === 'synchronizeInvest') {
+      const step = L('SYNCHRONIZING INVEST');
+      const dataMsg = this.props.stateInvest.dataMsg;
+      let line2 = null;
+      if(dataMsg && dataMsg.length > 0) {
+        line2 = <Text>{dataMsg}</Text>;
+      }
+      return (
+        <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
+          <ActivityIndicator />
+          <Text>{step}</Text>
+          {line2}
         </View>
       );
     }
@@ -282,6 +315,9 @@ class ReloginScreen extends React.Component {
           </View>
           <Button accent text={L('Reset App')} onPress={()=>this.handleReset()} />
         </View>
+        <View style={{flex:1, position:'absolute', left:0, right:0, bottom:0}}>
+            <Text style={{textAlign:'right'}}>{VersionNumber.appVersion + '(' + VersionNumber.buildVersion + ')'}</Text> 
+          </View>
       </View>
     );
   }
@@ -357,7 +393,14 @@ class LoginScreen extends React.Component {
 
     this.props.actions.startSynchronize(resume)
     .then(()=>{
-      console.warn('synchronize done');
+      const idmsuser = this.props.stateLogin.idmsuser;
+      this.setState({
+        show:'synchronizeInvest'
+      });
+      // return SyncHelper.downloadInvestDataForThreeMonth(idmsuser);
+      return SyncHelper.downloadInvestDataFromStartYear(this.props.investActions,idmsuser);
+    })
+    .then(()=>{
       this.props.actions.setSetting('lastLogin',moment().unix());
       if(this.props.stateLogin.accessrole == '1' )
         return this.props.navigation.navigate('HomeOwner');  
@@ -388,6 +431,22 @@ class LoginScreen extends React.Component {
         <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
           <ActivityIndicator />
           <Text>{step}</Text>
+        </View>
+      );
+    }
+
+    if(this.state.show === 'synchronizeInvest') {
+      const step = L('SYNCHRONIZING INVEST');
+      const dataMsg = this.props.stateInvest.dataMsg;
+      let line2 = null;
+      if(dataMsg && dataMsg.length > 0) {
+        line2 = <Text>{dataMsg}</Text>;
+      }
+      return (
+        <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
+          <ActivityIndicator />
+          <Text>{step}</Text>
+          {line2}
         </View>
       );
     }
@@ -479,6 +538,9 @@ class LoginScreen extends React.Component {
             </View>
           </View>
         </View>
+        <View style={{flex:1, position:'absolute', left:0, right:0, bottom:0}}>
+            <Text style={{textAlign:'right'}}>{VersionNumber.appVersion + '(' + VersionNumber.buildVersion + ')'}</Text> 
+          </View>
       </View>
   	);
   }
@@ -490,12 +552,14 @@ function mapStateToProps(state) {
     stateLogin: state.Login,
     stateSetting: state.Setting,
     stateData: state.Data,
+    stateInvest: state.Invest
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(actions, dispatch)
+    actions: bindActionCreators(actions, dispatch),
+    investActions: bindActionCreators(investActions, dispatch)
   };
 }
 

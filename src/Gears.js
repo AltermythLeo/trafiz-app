@@ -1,3 +1,4 @@
+const L = require('./dictionary').translate;
 const _ = require('lodash');
 
 const fishinggear = [
@@ -195,4 +196,20 @@ module.exports.getAbbr = function(apicode) {
     return apicode;
   } 
   return 'MIS';
+}
+
+module.exports.getName = function(apicode) {
+  if(!apicode) return 'MISC';
+  const result = _.find(fishinggear,{apicode:apicode});
+  const eng = (L('en') == 'en');
+  if(result !== undefined && result !== null) 
+  {
+    if((result.engname !== undefined && eng) || (result.indname !== undefined && !eng)) 
+      return (eng ? result.engname : result.indname);
+    } else if(apicode && apicode.length == 3) {
+      return apicode;
+  } else if(apicode && apicode.length == 3) {
+    return apicode;
+  } 
+  return 'MISC';
 }

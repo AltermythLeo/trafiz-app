@@ -29,10 +29,15 @@ import { MyPicker } from '../MyPicker';
 const lib = require('../lib');
 const Gears = require('../Gears');
 const L = require('../dictionary').translate;
+const prevScreen = '';
 
 class DetailScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     const params = navigation.state.params || {};
+    if(params)
+    {
+      prevScreen = params.prevScreen;
+    }
     // const title = navigation.getParam('headerTitle', null);
     // console.warn(title);
     return {
@@ -171,8 +176,6 @@ class DetailScreen extends React.Component {
         vesselownerdistrict_param:'vesselownerdistrict_param',
       }
 
-      console.warn(data);
-  
       for(let i=0;i<inputs.length;i++) {
         const inputKey = inputs[i].key;
         const dataKey = ref[inputKey];
@@ -247,7 +250,14 @@ class DetailScreen extends React.Component {
     })
     .then(()=>{
       this.setState({show:'form'});
-      this.props.navigation.navigate('CreateVesselBoatList');   
+      console.warn(prevScreen);
+      if(prevScreen == '' || prevScreen == undefined || prevScreen == null)
+        this.props.navigation.navigate('CreateVesselBoatList');   
+      else
+      {
+        this.props.navigation.pop();
+        this.props.navigation.navigate(prevScreen);   
+      }
     })
     .catch(err=>{
       console.warn(err);
@@ -264,7 +274,11 @@ class DetailScreen extends React.Component {
     })
     .then(()=>{
       this.setState({show:'form'});
-      this.props.navigation.navigate('CreateVesselBoatList');   
+      console.warn(prevScreen);
+      if(prevScreen == '' || prevScreen == undefined || prevScreen == null)
+        this.props.navigation.navigate('CreateVesselBoatList');   
+      else
+        this.props.navigation.navigate(prevScreen);   
     })
     .catch(err=>{
       console.warn(err);
@@ -313,14 +327,14 @@ class DetailScreen extends React.Component {
     if(english) rows = gears.eng;
     else rows = gears.ind;
 
-    this.props.navigation.navigate('CreateVesselSelectGear', {
+    this.props.navigation.navigate(prevScreen == 'InvestVesselSelectScreen' ? 'InvestVesselSelectGearScreen' : 'CreateVesselSelectGear', {
       rows: rows,
       onReturnSelect: (text) => this.setInput(index,text)
     });
   }
 
   openCountry(index) {
-    this.props.navigation.navigate('CreateVesselSelect', {
+    this.props.navigation.navigate(prevScreen == 'InvestVesselListSelectScreen' ? 'InvestVesselSelectGearScreen' : 'CreateVesselSelect', {
       rows: ['INDONESIA'],
       onReturnSelect: (text) => this.setInput(index,text)
     });
@@ -330,7 +344,7 @@ class DetailScreen extends React.Component {
     const input = _.find(this.state.inputs,{key:'vesselownercountry_param'});
     const country = input.value;
     const rows = lib.getProvinces(country);
-    this.props.navigation.navigate('CreateVesselSelect', {
+    this.props.navigation.navigate(prevScreen == 'InvestVesselListSelectScreen' ? 'InvestVesselSelectGearScreen' : 'CreateVesselSelect', {
       rows: rows,
       onReturnSelect: (text) => this.setInput(index,text)
     });
@@ -340,7 +354,7 @@ class DetailScreen extends React.Component {
     const input = _.find(this.state.inputs,{key:'vesselownerprovince_param'});
     const province = input.value;
     const rows = lib.getCity(province);
-    this.props.navigation.navigate('CreateVesselSelect', {
+    this.props.navigation.navigate(prevScreen == 'InvestVesselListSelectScreen' ? 'InvestVesselSelectGearScreen' : 'CreateVesselSelect', {
       rows: rows,
       onReturnSelect: (text) => this.setInput(index,text)
     });

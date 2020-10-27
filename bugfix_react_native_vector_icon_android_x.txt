@@ -1,0 +1,3 @@
+https://github.com/oblador/react-native-vector-icons#the-icons-show-up-as-a-crossed-out-box-on-android
+
+Make sure you've copied the font to android/app/src/main/assets/fonts

@@ -33,7 +33,7 @@ class Title extends Component {
     if(offline) {
       return (
         <View style={{flex:1}}>
-          <Text style={{textAlign:'center',color:'white',fontWeight:'bold'}}>{txt}</Text>
+          <Text numberOfLines={1} style={{textAlignVertical:'center', textAlign:'center',color:'white',fontWeight:'bold',fontSize:14}}>{txt}</Text>
           <View style={{alignItems:'center',justifyContent:'center'}}>
             <Text style={{textAlign:'center',fontSize:10,color:'white',fontWeight:'bold',backgroundColor:'red'}}> OFFLINE MODE </Text>
           </View>
@@ -41,6 +41,12 @@ class Title extends Component {
       );
     }
 
+    if(this.props.size)
+      return (
+        <View style={{flex:1}}>
+          <Text style={{textAlign:'center',color:'white',fontWeight:'bold', fontSize:this.props.size}}>{txt}</Text>
+        </View>
+      );
     return (
       <View style={{flex:1}}>
         <Text style={{textAlign:'center',color:'white',fontWeight:'bold'}}>{txt}</Text>
@@ -77,10 +83,31 @@ class BackButton extends Component {
   }
 }
 
+//This is not used:To be removed
+class BackButtonWithParam extends Component {
+  goBack() {
+    if(this.props.backRoute && false)
+    {
+      this.props.navigation.popToTop(); 
+      this.props.navigation.navigate(this.props.backRoute);
+    }else
+      this.props.navigation.goBack();
+  }
+
+  render() {
+    return (
+      <TouchableOpacity style={{paddingLeft:10,paddingRight:40,paddingVertical:10}} onPress={()=>this.goBack()}>
+        <FontAwesome name='arrow-left' size={25} color='white'/>
+      </TouchableOpacity>
+    );
+  }
+}
+
 // BackButton = withNavigation(BackButton);
 
 class OnlineIndicator extends Component {
   synchronize() {
+    console.warn('masuk sini');
     this.props.navigation.navigate('SynchScreen');
   }
   
@@ -145,5 +172,5 @@ Title = connect(
   mapDispatchToProps
 )(Title);
 
-export { Navicon, BackButton, OnlineIndicator, Title };
+export { Navicon, BackButton, BackButtonWithParam, OnlineIndicator, Title };
 

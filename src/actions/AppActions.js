@@ -3,6 +3,8 @@ import moment from 'moment';
 import _ from 'lodash';
 import email from 'react-native-email';
 
+const investSynchHelper = require('../invest/SyncHelper')
+
 axios.defaults.headers.common['User-Agent'] = 'TRAFIZ';
 
 export const CREATE_DATA = 'CREATE_DATA';
@@ -426,6 +428,7 @@ export function appSetConnection(status) {
 }
 
 export function setOffline(offline) {
+  investSynchHelper.setOffline(offline);
   return {
     type: SET_OFFLINE,
     offline: offline,
@@ -442,6 +445,7 @@ export function setOnlineAndSynch() {
     console.warn('set online & synch..');
     return syncToServerBetterErrorHandling(dispatch,getState)
       .then(()=>{
+        investSynchHelper.setOffline(false);
         dispatch({
           type: SET_OFFLINE,
           offline: false,
@@ -477,7 +481,7 @@ export function loginUser(username,password) {
       .then(result=>{
         if(result.status === 200 && result.data.err === 'ok') {
           const data = result.data.data;
-          console.warn(data);
+          // console.warn(data);
           dispatch({
             type: LOGIN_USER,
             identity: username,
@@ -2998,7 +3002,7 @@ export function getProfile() {
         if(result.status === 200) {
           console.warn('get profile done!');
           const profile = result.data[0];
-          console.warn(profile);
+          // console.warn(profile);
           dispatch({
             type: LOGIN_SET_PROFILE,
             profile:profile
@@ -3190,7 +3194,7 @@ export function getExtraData() {
       .then(result=>{
         if(result.status === 200) {
           const rows = result.data;
-          console.warn('getExtraData:',rows);
+          // console.warn('getExtraData:',rows);
           if(rows && rows.length > 0) {
             const savedtext = rows[0].savedtext;
             const json = JSON.parse(savedtext);

@@ -1,10 +1,9 @@
 package com.altermyth.trafiz;
 
 import android.app.Application;
-
+import com.apsl.versionnumber.RNVersionNumberPackage;
 import com.facebook.react.ReactApplication;
 import com.christopherdro.RNPrint.RNPrintPackage;
-import com.christopherdro.htmltopdf.RNHTMLtoPDFPackage;
 import org.reactnative.camera.RNCameraPackage;
 import org.pgsqlite.SQLitePluginPackage;
 import com.facebook.react.ReactNativeHost;
@@ -14,7 +13,8 @@ import com.facebook.soloader.SoLoader;
 import com.tkporter.sendsms.SendSMSPackage;
 import com.horcrux.svg.SvgPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
-import com.reactnativecommunity.rnpermissions.RNPermissionsPackage;
+import com.rnfs.RNFSPackage;
+import com.vinzscam.reactnativefileviewer.RNFileViewerPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -32,12 +32,13 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new RNPrintPackage(),
-          new RNHTMLtoPDFPackage(),
           new SQLitePluginPackage(),
           new RNCameraPackage(),
           new SvgPackage(),
           new AsyncStoragePackage(),
-          new RNPermissionsPackage(),
+          new RNFSPackage(),
+          new RNFileViewerPackage(),
+          new RNVersionNumberPackage(),
           SendSMSPackage.getInstance()
       );
     }

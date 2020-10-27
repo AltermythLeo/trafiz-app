@@ -135,7 +135,7 @@ class Screen extends React.Component {
     if( this.state.show === 'temp' ) {
       return (
         <View style={{flex:1,alignItems:'center',justifyContent:'center',padding:15}}>
-          <Text style={{textAlign:'center'}}>L('PIN CHANGED SUCCESSFULLY')</Text>
+          <Text style={{textAlign:'center'}}>{L('PIN CHANGED SUCCESSFULLY')}</Text>
         </View>
       );
     }

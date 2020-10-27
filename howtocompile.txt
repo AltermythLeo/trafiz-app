@@ -1,0 +1,15 @@
+to compile trafiz:
+
+1. prepare dev environment by this guide:
+   https://facebook.github.io/react-native/docs/getting-started
+   read step on "react native cli quickstart"
+   ensure AwesomeProject can be run on device!
+
+2. git clone from repo
+   - select branch or tags
+   
+3. enter folder, and run: npm install
+
+4. run: react-native run-android
+   - if there is error "Could not read path blabla/android/build/blabla" :
+     cd to blabla/android and delete folder build, then, run again: react-native run-android

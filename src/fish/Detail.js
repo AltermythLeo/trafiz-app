@@ -102,6 +102,7 @@ class DetailScreen extends React.Component {
       this.setState({show:'form',inputs:inputs});
     } else if(mode === 'edit') {
       const item = this.props.navigation.getParam('item');
+      console.warn(item);
       if(item.idfishoffline) inputs[0].value = item.idfishoffline;
       if(item.indname) inputs[2].value = item.indname;
       if(item.english_name) inputs[3].value = item.english_name;

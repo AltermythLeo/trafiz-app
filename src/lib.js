@@ -3,6 +3,8 @@ const axios = require('axios');
 const country2prov = require('./json/country2prov.json');
 const prov2city = require('./json/prov2city.json');
 const grid = require('./json/grid.json');
+const randomColor = require('randomcolor');
+
 
 Number.prototype.format = function(c, d, t){
   var n = this, 
@@ -16,8 +18,20 @@ Number.prototype.format = function(c, d, t){
 };
 
 module.exports.TRAFIZ_URL = 'https://trafiz.org';
-//module.exports.TRAFIZ_URL = 'http://192.168.100.72/trafiz';
-module.exports.THEME_COLOR = 'royalblue';
+//module.exports.TRAFIZ_URL = 'http://192.168.100.83/trafizbackend';
+//module.exports.TRAFIZ_URL = 'http://192.168.1.100:8080/trafizbackend';
+module.exports.THEME_COLOR       = 'royalblue';
+module.exports.THEME_COLOR_RED   = 'red';
+module.exports.THEME_COLOR_GREEN = 'green';
+module.exports.THEME_COLOR_BLACK = 'black';
+module.exports.THEME_COLOR_LIGHTGREY  = 'gainsboro';
+module.exports.THEME_COLOR_GREY  = '#949494';
+module.exports.THEME_FONT_SMALL  = 12;
+module.exports.THEME_FONT_MEDIUM = 16;
+module.exports.THEME_FONT_LARGE  = 18;
+
+module.exports.selectedDate = '';
+
 module.exports.delay = function (ms) {
   return new Promise((resolve,reject)=>{
     setTimeout(()=>{
@@ -26,9 +40,22 @@ module.exports.delay = function (ms) {
   });
 }
 
+module.exports.capitalize = function(str) {
+  str = str[0].toUpperCase() + str.slice(1);
+  return str;
+}
+
+
 module.exports.toPrice = function (num) {
   const ret = Number(num);
   return ret.format(0);
+}
+
+module.exports.toNumber = function (num) {
+  if(num === undefined || num === null)
+    return 0;
+  const ret = num.replace(/\D/g,'');
+  return Number(ret);
 }
 
 module.exports.getFN = function (str) {
@@ -62,7 +89,7 @@ module.exports.getIdFish = function (msg1) {
 module.exports.dump = function(json) {
   axios({
     method: 'post',
-    url: 'http://192.168.100.23:3000',
+    url: 'http://192.168.100.83:8888/dump',
     data: json
   })
   .then(result=>{
@@ -135,3 +162,16 @@ module.exports.getMDPI = function(str) {
 
   return false;
 }
+
+module.exports.colorForIndex = function(index) {
+  const reserved = ['rgba(131, 167, 234, 1)','green','red','orange','blue'];
+  if(index < reserved.length) return reserved[index];
+  return randomColor();
+}
+
+module.exports.colorForIndex2 = function(index) {
+  const reserved = ['red','orange','yellow','green', 'blue', 'purple','pink','brown'];
+  if(index < reserved.length) return reserved[index];
+  return randomColor();
+}
+

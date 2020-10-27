@@ -320,7 +320,7 @@ class RegisterScreen extends React.Component {
 
     return (
       <View style={{flex:1,backgroundColor:'white'}}>
-        <ScrollView style={{flex:1,padding:10}}>
+        <ScrollView keyboardShouldPersistTaps={'always'} style={{flex:1,padding:10}}>
           <TextField
             tintColor={lib.THEME_COLOR}
             onChangeText={(text) => this.setState({hp:text})}

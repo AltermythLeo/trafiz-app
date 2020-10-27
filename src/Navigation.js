@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import { Image, AppRegistry, StyleSheet, Text, View, Button, AppState, NetInfo, ScrollView } from 'react-native';
+import { Image, AppRegistry, StyleSheet, Text, View, Button, AppState, NetInfo, ScrollView , Touchable} from 'react-native';
 import { 
   createStackNavigator, 
   createSwitchNavigator, 
   createBottomTabNavigator,
   createDrawerNavigator,
   NavigationActions,
+  DrawerItem,
   DrawerItems, 
   SafeAreaView
 } from 'react-navigation';
+import TouchableItem from 'react-navigation/src/views/TouchableItem';
+import CustomDrawerItems from './CustomDrawerItems';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -33,6 +36,29 @@ import FishListScreen from './fish/List';
 import FishDetailScreen from './fish/Detail';
 import FishSearchScreen from './fish/Search';
 import FishListSelectScreen from './fish/ListSelect';
+
+import FinancialReportListScreen from './financialreport/ReportList';
+import FinancialReportFinancialScreen from './financialreport/FinancialReport';
+import FinancialReportFilterScreen from './financialreport/DataFilter';
+import FinancialReportAnnualFinancialScreen from './financialreport/AnnualFinancialReport';
+import FinancialReportCatchScreen from './financialreport/CatchReport';
+import FinancialReportAnnualCatchScreen from './financialreport/AnnualCatchReport';
+
+import TransactionListScreen from './transaction/List';
+import TransactionListAddIncome from './transaction/AddIncome';
+import TransactionListAddExpense from './transaction/AddExpense';
+import TransactionListBuyFish  from './transaction/BuyFish';
+import TransactionListSellFish  from './transaction/SellFish';
+import TransactionListSplitFish from './transaction/SplitFish';
+import TransactionListGetLoan from './transaction/GetLoan';
+import TransactionListLoanList from './transaction/LoanList';
+import TransactionListLoanPayment from './transaction/LoanPayment';
+import TransactionListDebtPayment from './transaction/DebtPayment';
+import TransactionListGiveLoan from './transaction/GiveLoan';
+import TransactionListDebtList from './transaction/DebtList';
+import TransactionListAddNewCategory from './transaction/AddNewCategory';
+import TransactionListAddNewIncomeCategory from './transaction/AddNewIncomeCategory';
+
 import LoanListScreen from './loan/List';
 import LoanListNewScreen from './loan/ListNew';
 import LoanListItemsScreen from './loan/ListItems';
@@ -82,6 +108,37 @@ import HelpScreen from './others/Help';
 import EditProfileScreen from './others/EditProfile';
 import SynchScreen from './SynchScreen';
 
+import InvestHomeScreen from './invest/Home';
+import InvestAddExpenseScreen from './invest/AddExpense';
+import InvestAddIncomeScreen from './invest/AddIncome';
+import InvestTakeLoanScreen from './invest/TakeLoan';
+import InvestTakeLoanInfoScreen from './invest/TakeLoanInfo';
+import InvestPayLoanScreen from './invest/PayLoan';
+import InvestBuyFishScreen from './invest/BuyFish';
+import InvestVesselSelectScreen from './invest/SelectVessel';
+import InvestVesselCreateScreen from './ship/Detail';
+import InvestVesselListSelectScreen from './ship/ListSelect';
+
+import InvestSplitFishScreen from './invest/SplitFish';
+import InvestSellFishScreen from './invest/SellFish';
+import InvestSimpleSellFishScreen from './invest/SimpleSellFish';
+import InvestGiveCreditScreen from './invest/GiveCredit';
+import InvestCreditPaymentScreen from './invest/CreditPayment';
+import InvestSelectBuyFishToSellScreen from './invest/SelectBuyFishToSell';
+import InvestSelectTakeLoanToPayScreen from './invest/SelectTakeLoanToPay';
+import InvestSelectTakeLoanToPayShortCutScreen from './invest/SelectTakeLoanToPayShortCut';
+import InvestSelectCreditForPaymentScreen from './invest/SelectCreditForPayment';
+import InvestCustomTypeIncomeScreen from './invest/CustomTypeIncome';
+import InvestCustomTypeExpenseScreen from './invest/CustomTypeExpense';
+import InvestCustomIncomeScreen from './invest/CustomIncome';
+import InvestCustomExpenseScreen from './invest/CustomExpense';
+import InvestCustomEditSelectScreen from './invest/CustomTypeEditSelect';
+import InvestCustomEditListScreen from './invest/CustomTypeEditList';
+import InvestCustomEditScreen from './invest/CustomTypeEdit';
+import BuyFishMapScreen from './Map';
+import XlsxScreen from './xlsxPage';
+
+
 const lib = require('./lib');
 const L = require('./dictionary').translate;
 
@@ -112,7 +169,6 @@ const HomeTabsOpt = {
 
 const HomeTabsRole1 = createBottomTabNavigator({ 
   Tab1: CatchListScreen,
-  // Tab1: ReportListScreen,
   Tab2: LoanListScreen,
   Tab3: DeliveryListScreen,
   Tab4: ReportListScreen
@@ -280,6 +336,127 @@ const CreateBuyerStack = createStackNavigator({
   navigationOptions: stdNavOpts
 });
 
+const CreateCatchStack = createStackNavigator(
+  {
+    CatchListScreen               : CatchListScreen,
+    CatchSelectPlayerScreen       : CatchSelectPlayerScreen,
+    CatchCreateDataScreen         : CatchCreateDataScreen,
+    CatchEditDataScreen           : CatchEditDataScreen,
+    CatchCatchListScreen          : CatchCatchListScreen,
+    CatchEditOneCatchListScreen   : CatchEditOneCatchListScreen,
+    CatchAddOneCatchListScreen    : CatchAddOneCatchListScreen,
+    CatchCalcCatchListValueScreen : CatchCalcCatchListValueScreen,
+    CatchPreCalcScreen            : CatchPreCalcScreen,
+    CatchSelectBuyerScreen        : CatchSelectBuyerScreen,
+    CatchDuplicateScreen          : CatchDuplicateScreen,
+    MapScreen:MapScreen,
+  },
+  {
+    initialRouteName  : 'CatchListScreen',
+    navigationOptions : stdNavOpts
+  }
+);
+
+const CreateLoanStack = createStackNavigator(
+  {
+    LoanListScreen            : LoanListScreen,
+    LoanListNewScreen         : LoanListNewScreen,
+    LoanListItemsScreen       : LoanListItemsScreen,
+    LoanAddItemScreen         : LoanAddItemScreen,
+    LoanEditItemScreen        : LoanEditItemScreen,
+    LoanCheckItemsScreen      : LoanCheckItemsScreen,
+    LoanPayScreen             : LoanPayScreen,
+    LoanSelectTypeScreen      : LoanSelectTypeScreen
+  },
+  {
+    initialRouteName  : 'LoanListScreen',
+    navigationOptions : stdNavOpts
+  }
+);
+
+const CreateDeliveryStack = createStackNavigator(
+  {
+    DeliveryListScreen              : DeliveryListScreen,
+    DeliverySelectScreen            : DeliverySelectScreen,
+    DeliveryCatchListScreen         : DeliveryCatchListScreen,
+    DeliveryCatchListCloseScreen    : DeliveryCatchListCloseScreen,
+    DeliveryCalcPriceScreen         : DeliveryCalcPriceScreen,
+    DeliveryCloseScreen             : DeliveryCloseScreen,
+    DeliverySheetScreen             : DeliverySheetScreen,
+    DeliveryAddScreen               : DeliveryAddScreen,
+    DeliveryPreCalcScreen           : DeliveryPreCalcScreen,
+    DeliveryShowQRCodesScreen       : DeliveryShowQRCodesScreen,
+    CatchScanQRCodeScreen           : CatchScanQRCodeScreen
+  },
+  {
+    initialRouteName  : 'DeliveryListScreen',
+    navigationOptions : stdNavOpts
+  }
+);
+
+const CreateLoanShortCutStack = createStackNavigator(
+  {
+    InvestSelectTakeLoanToPayShortCutScreen : InvestSelectTakeLoanToPayShortCutScreen,
+    InvestTakeLoanInfoScreen        : InvestTakeLoanInfoScreen   
+  },
+  {
+    initialRouteName  : 'InvestSelectTakeLoanToPayShortCutScreen',
+    navigationOptions : stdNavOpts
+  }
+)
+
+const CreateCatchReportStack = createStackNavigator(
+  {
+    ReportListScreen                 : ReportListScreen,
+    ReportLoanTabsScreen             : ReportLoanTabsScreen,
+    ReportSaleTabsScreen             : ReportSaleTabsScreen,
+    TransactionReportScreen          : TransactionReportScreen,
+    LoanReportScreen                 : LoanReportScreen,
+    FishermanSupplierFilterScreen    : FishermanSupplierFilterScreen,
+    FishermanSupplierReportScreen    : FishermanSupplierReportScreen,
+    FishermanSupplierTabsScreen      : FishermanSupplierTabsScreen,
+    SaleFilterScreen                 : SaleFilterScreen,
+  },
+  {
+    initialRouteName  : 'ReportListScreen',
+    navigationOptions : stdNavOpts
+  }
+)
+
+const CreateFinancialReportStack = createStackNavigator({ 
+  FinancialReportFinancialScreen        : FinancialReportFinancialScreen,
+  FinancialReportAnnualFinancialScreen  : FinancialReportAnnualFinancialScreen,
+  FinancialReportCatchScreen            : FinancialReportCatchScreen,
+  FinancialReportAnnualCatchScreen      : FinancialReportAnnualCatchScreen,
+  FinancialReportFilterScreen           : FinancialReportFilterScreen,
+  FinancialReportListScreen             : FinancialReportListScreen,
+  XlsxScreen                            : XlsxScreen
+},{
+  initialRouteName: 'FinancialReportListScreen',
+  navigationOptions: stdNavOpts
+});
+
+/*const CreateTransactionStack = createStackNavigator({
+ TransactionListScreen        : TransactionListScreen,
+ TransactionListAddIncome     : TransactionListAddIncome,
+ TransactionListAddExpense    : TransactionListAddExpense,
+ TransactionListSplitFish     : TransactionListSplitFish,
+ TransactionListGetLoan       : TransactionListGetLoan,
+ TransactionListLoanPayment   : TransactionListLoanPayment,
+ TransactionListLoanList      : TransactionListLoanList,
+ TransactionListGiveLoan      : TransactionListGiveLoan,
+ TransactionListDebtList      : TransactionListDebtList,
+ TransactionListDebtPayment   : TransactionListDebtPayment,
+ TransactionListAddNewCategory : TransactionListAddNewCategory,
+ TransactionListAddNewIncomeCategory : TransactionListAddNewIncomeCategory,
+ TransactionListSellFish      : TransactionListSellFish,
+ TransactionListBuyFish       : TransactionListBuyFish
+},{
+  initialRouteName            : 'TransactionListScreen',
+  navigationOptions           : stdNavOpts
+})
+*/
+
 const CreateSupplierStack = createStackNavigator({ 
   SupplierListScreen: SupplierListScreen,
   SupplierDetailScreen: SupplierDetailScreen,
@@ -349,15 +526,58 @@ const EditProfileStack = createStackNavigator({
   navigationOptions: stdNavOpts
 });
 
+const EditCustomCategoryStack = createStackNavigator({ 
+  InvestCustomEditSelectScreen: InvestCustomEditSelectScreen,
+  InvestCustomEditListScreen: InvestCustomEditListScreen,
+  InvestCustomEditScreen: InvestCustomEditScreen
+},{
+  initialRouteName: 'InvestCustomEditSelectScreen',
+  navigationOptions: stdNavOpts
+});
+
+const InvestLoanStack = createStackNavigator({ 
+  InvestHomeScreen: InvestHomeScreen,
+  InvestAddExpenseScreen: InvestAddExpenseScreen,
+  InvestAddIncomeScreen: InvestAddIncomeScreen,
+  InvestTakeLoanScreen: InvestTakeLoanScreen,
+  InvestTakeLoanInfoScreen: InvestTakeLoanInfoScreen,
+  InvestPayLoanScreen: InvestPayLoanScreen,
+  InvestBuyFishScreen: InvestBuyFishScreen,
+  InvestVesselSelectScreen:InvestVesselSelectScreen,
+  InvestVesselCreateScreen: InvestVesselCreateScreen,
+  InvestVesselListSelectScreen:InvestVesselListSelectScreen,
+  InvestVesselSelectGearScreen:PickerScreen,
+  InvestSellFishScreen: InvestSellFishScreen,
+  InvestSelectBuyFishToSellScreen: InvestSelectBuyFishToSellScreen,
+  InvestSelectTakeLoanToPayScreen: InvestSelectTakeLoanToPayScreen,
+  BuyFishMapScreen: BuyFishMapScreen,
+  InvestGiveCreditScreen:InvestGiveCreditScreen,
+  InvestCreditPaymentScreen:InvestCreditPaymentScreen,
+  InvestSelectCreditForPaymentScreen:InvestSelectCreditForPaymentScreen,
+  InvestCustomTypeIncomeScreen:InvestCustomTypeIncomeScreen,
+  InvestCustomTypeExpenseScreen:InvestCustomTypeExpenseScreen,
+  InvestCustomIncomeScreen:InvestCustomIncomeScreen,
+  InvestCustomExpenseScreen:InvestCustomExpenseScreen,
+  InvestSplitFishScreen:InvestSplitFishScreen,
+  InvestSimpleSellFishScreen:InvestSimpleSellFishScreen,
+  XlsxScreen:XlsxScreen
+},{
+  initialRouteName: 'InvestHomeScreen',
+  navigationOptions: stdNavOpts
+});
+
 const CustomDrawer = (props) => (
   <View style={{flex:1}}>
-    <View style={{backgroundColor:'white',height:180,alignItems:'center',justifyContent:'center'}}>
+    <View style={{backgroundColor:'white',height:180,alignItems:'center',justifyContent:'center', borderBottomWidth :1, borderColor:'gainsboro'}}>
       <Image style={{height:64}} resizeMode='contain' source={require('./logo.png')} />
     </View>
-    <View style={{flex:1}}>
+    <View style={{flex:1, borderBottomWidth :1, borderColor:'gainsboro'}}>
       <ScrollView>
         <SafeAreaView style={{flex:1}} forceInset={{ top: 'always', horizontal: 'never' }}>
-          <DrawerItems {...props} />
+          <CustomDrawerItems {...props} 
+              labelStyle={{ fontSize:lib.THEME_FONT_MEDIUM}}
+              itemStyle ={{borderBottomWidth:(props.getLabel == L('Loan') ? 1 : 0)}}
+          />
         </SafeAreaView>
       </ScrollView>
     </View>
@@ -368,15 +588,6 @@ const CustomDrawer = (props) => (
 );
 
 const DrawerStack = createDrawerNavigator({
-  HomeMenu: {
-    screen:HomeStack,
-    navigationOptions: ({ navigation }) => ({
-      drawerLabel: L('Home'),
-      drawerIcon: ({ tintColor }) => (
-        <FontAwesome name='ship' color={tintColor} />
-      ),
-    }),
-  },
   ChangePinMenu: {
     screen: ChangePINStack,
     navigationOptions: ({ navigation }) => ({
@@ -409,24 +620,83 @@ const DrawerStack = createDrawerNavigator({
 });
 
 const FullDrawerStack = createDrawerNavigator({
-  HomeMenu: {
-    screen:HomeStack,
+  InvestTransactionMenu: {
+    screen:InvestLoanStack,
     navigationOptions: ({ navigation }) => ({
-      drawerLabel: L('Home'),
+      drawerLabel: L('Transaction'),
+      drawerIcon: ({ tintColor }) => (
+        <FontAwesome name='ship' color={tintColor}/>
+      ),
+    }),
+  },
+  DebtMenu: {
+    screen: CreateLoanShortCutStack,
+    navigationOptions: ({ navigation }) => ({
+      drawerLabel: L('Loan'),
       drawerIcon: ({ tintColor }) => (
         <FontAwesome name='ship' color={tintColor} />
       ),
     }),
   },
-  EditProfileMenu: {
-    screen: EditProfileStack,
+  FinancialReportMenu: {
+    screen: CreateFinancialReportStack,
     navigationOptions: ({ navigation }) => ({
-      drawerLabel: L('Edit Profile'),
+      drawerLabel: L('Financial Report'),
       drawerIcon: ({ tintColor }) => (
         <FontAwesome name='ship' color={tintColor} />
       ),
     }),
   },
+  
+  // TransactionMenu: {
+  //   screen: CreateTransactionStack,
+  //   navigationOptions: ({ navigation }) => ({
+  //     drawerLabel: L('A:Transaction List'),
+  //     drawerIcon: ({ tintColor }) => (
+  //       <FontAwesome name='ship' color={tintColor} />
+  //     ),
+  //   }),
+  // },
+  CatchMenu:{
+    screen : CreateCatchStack,
+    navigationOptions : ({navigation}) => ({
+      drawerLabel:L('Catch<Menu>').replace('<Menu>', ''),
+      drawerIcon:({tintColor}) => (
+        <FontAwesome name='ship' color={tintColor} />
+      )
+    })
+  },
+
+  LoanMenu:{
+    screen : CreateLoanStack,
+    navigationOptions : ({navigation}) => ({
+      drawerLabel:L('Credit'),
+      drawerIcon:({tintColor}) => (
+        <FontAwesome name='ship' color={tintColor} />
+      )
+    })
+  },
+
+  DeliveryMenu:{
+    screen : CreateDeliveryStack,
+    navigationOptions : ({navigation}) => ({
+      drawerLabel:L('Delivery'),
+      drawerIcon:({tintColor}) => (
+        <FontAwesome name='ship' color={tintColor} />
+      )
+    })
+  },
+
+  CatchReportMenu: {
+    screen: CreateCatchReportStack,
+    navigationOptions: ({ navigation }) => ({
+      drawerLabel: L('Catch Report'),
+      drawerIcon: ({ tintColor }) => (
+        <FontAwesome name='ship' color={tintColor} />
+      ),
+    }),
+  },
+
   SupplierMenu: {
     screen: CreateSupplierStack,
     navigationOptions: ({ navigation }) => ({
@@ -472,6 +742,27 @@ const FullDrawerStack = createDrawerNavigator({
       ),
     }),
   },
+
+  EditCustomCategoryMenu:{
+    screen:EditCustomCategoryStack,
+    navigationOptions: ({ navigation }) => ({
+      drawerLabel: L('Setting Finance Category'),
+      drawerIcon: ({ tintColor }) => (
+        <FontAwesome name='ship' color={tintColor} />
+      ),
+    }),
+  },
+
+  EditProfileMenu: {
+    screen: EditProfileStack,
+    navigationOptions: ({ navigation }) => ({
+      drawerLabel: L('Edit Profile'),
+      drawerIcon: ({ tintColor }) => (
+        <FontAwesome name='ship' color={tintColor} />
+      ),
+    }),
+  },
+  
   ChangePinMenu: {
     screen: ChangePINStack,
     navigationOptions: ({ navigation }) => ({
@@ -481,6 +772,7 @@ const FullDrawerStack = createDrawerNavigator({
       ),
     }),
   },
+  
   ChangeLangMenu: {
     screen: ChangeLangStack,
     navigationOptions: ({ navigation }) => ({
@@ -509,7 +801,8 @@ const RootStack = createSwitchNavigator(
     Login:LoginStack,
     Home:DrawerStack,
     HomeOwner:FullDrawerStack,
-    Relogin:ReloginScreen
+    Relogin:ReloginScreen,
+    SynchScreen: SynchScreen
   },
   {
     initialRouteName: 'LoginCheck'

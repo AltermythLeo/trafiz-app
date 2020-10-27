@@ -66,7 +66,7 @@ class Screen extends React.Component {
       show:'busy',
       inputs:[
         {label:'offlineId',key:'id',value:'',disabled:true},
-        {label:L('Name'),key:'name',value:'',mandatory:true,disabled:true},
+        {label:L('Name'),key:'name',value:'',mandatory:true,disabled:false},
         {label:L('Username'),key:'username',value:'',disabled:true},
         {label:L('Email'),key:'email',value:'',disabled:true},
         {label:L('Phone number'),key:'phonenumber',value:'',mandatory:true,disabled:true},
@@ -156,7 +156,7 @@ class Screen extends React.Component {
     if( login.offline ) {
       return this.setState({
         show:'error',
-        errMsg:arr[i].label+L('Can not do on offline mode')
+        errMsg:L('Can not do on offline mode')
       });
     }
   

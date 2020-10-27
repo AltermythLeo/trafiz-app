@@ -22,6 +22,8 @@ import moment from 'moment';
 
 const lib = require('./lib');
 const L = require('./dictionary').translate;
+const SyncHelper = require('./invest/SyncHelper');
+
 
 class ListScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -56,6 +58,12 @@ class ListScreen extends React.Component {
     });
 
     this.props.actions.setOnlineAndSynch()
+    .then(()=>{
+      this.setState({
+        show:'synchronizeInvest'
+      });
+      return SyncHelper.uploadInvestData();
+    })
     .then(()=>{
       this.props.actions.endSynch();
       this.refreshData();
@@ -97,9 +105,15 @@ class ListScreen extends React.Component {
 
     this.props.actions.startSynchronize()
     .then(()=>{
-      console.warn('synchronize done');
+      this.setState({
+        show:'synchronizeInvest'
+      });
+      const idmsuser = this.props.stateLogin.idmsuser;
+      return SyncHelper.downloadInvestData(idmsuser);
+    })
+    .then(()=>{
       this.props.actions.setSetting('lastLogin',moment().unix());
-      return this.props.navigation.goBack();
+      return this.props.navigation.navigate('LoginCheck');
     })
     .catch(err=>{
       console.warn(err);
@@ -138,9 +152,17 @@ class ListScreen extends React.Component {
 
     this.props.actions.startSynchronize()
     .then(()=>{
-      console.warn('synchronize done');
+      console.warn('synchronize old trafiz done');
+      this.setState({
+        show:'synchronizeInvest'
+      });
+      const idmsuser = this.props.stateLogin.idmsuser;
+      return SyncHelper.downloadInvestData(idmsuser);
+    })
+    .then(()=>{
+      console.warn('synchronize trafiz invest done');
       this.props.actions.setSetting('lastLogin',moment().unix());
-      return this.props.navigation.goBack();
+      return this.props.navigation.navigate('LoginCheck');
     })
     .catch(err=>{
       console.warn(err);
@@ -162,6 +184,16 @@ class ListScreen extends React.Component {
 
     if(this.state.show === 'synchronize') {
       const step = L('SYNCHRONIZING')+' ('+this.props.stateTask.steps+')';
+      return (
+        <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
+          <ActivityIndicator />
+          <Text>{step}</Text>
+        </View>
+      );
+    }
+
+    if(this.state.show === 'synchronizeInvest') {
+      const step = L('SYNCHRONIZING INVEST DATA');
       return (
         <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
           <ActivityIndicator />

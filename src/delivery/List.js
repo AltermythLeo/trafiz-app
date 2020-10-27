@@ -37,7 +37,7 @@ class Screen extends React.Component {
         <Title txt={L('DELIVERY')} />
       ),
       headerLeft: (
-        <BackButton navigation={navigation}/>
+        <Navicon navigation={navigation}/>
       )
     };
   };

@@ -98,7 +98,6 @@ class ListScreen extends React.Component {
 
     let rows = this.props.stateData.ships.slice();
     _.remove(rows,{lasttransact:"D"});
-    console.warn(rows);
 
     // filter by search
     const filterStr = this.state.filter.toLowerCase();

@@ -3,6 +3,7 @@ import { AppRegistry, StyleSheet, Text, View, Button, ActivityIndicator } from '
 import { COLOR, ThemeContext, getTheme } from 'react-native-material-ui';
 import Navigation from './Navigation';
 import Sqlite from './Sqlite';
+import SqliteInvest from './SqliteInvest';
 
 // import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
@@ -22,7 +23,7 @@ import filter from 'redux-storage-decorator-filter';
 */
 
 const engine = createEngine('TRAFIZ');
-engine = filter(engine, [], ['App']);
+engine = filter(engine, [], ['App','Invest']);
 const storageMiddleware = storage.createMiddleware(engine);
 
 const reducer = storage.reducer(combineReducers(reducers));
@@ -50,7 +51,8 @@ const lib = require('./lib');
 
 const uiTheme = {
   palette: {
-    primaryColor: lib.THEME_COLOR,
+    primaryColor  : lib.THEME_COLOR,
+    secondaryColor: lib.THEME_COLOR_GREEN
   }
 };
 

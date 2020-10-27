@@ -24,7 +24,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/AppActions';
 import QRCode from 'react-native-qrcode';
 import SendSMS from 'react-native-sms';
-import RNHTMLtoPDF from 'react-native-html-to-pdf';
+//import RNHTMLtoPDF from 'react-native-html-to-pdf';
 import RNPrint from 'react-native-print';
 
 const ScrollableTabView = require('react-native-scrollable-tab-view');

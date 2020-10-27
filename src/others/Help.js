@@ -12,6 +12,7 @@ import {
   Picker,
   WebView
 } from 'react-native';
+import VersionNumber from 'react-native-version-number';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Button } from 'react-native-material-ui';
 import { TextField } from 'react-native-material-textfield';
@@ -65,6 +66,9 @@ class Screen extends React.Component {
           source={{html: html}}
           style={{flex: 1}}
         />
+        <View style={{padding:10, backgroundColor:'white'}}>
+          <Text style={{textAlign:'right'}}>{VersionNumber.appVersion + '(' + VersionNumber.buildVersion + ')'}</Text> 
+        </View>
         <View style={{padding:10}}>
           <Text style={{textAlign:'center'}}>{msg}</Text>
           <View style={{height:5}} />
